@@ -1,0 +1,230 @@
+{
+  "curatedPrompts": [
+    {
+      "id": "tech-lang-pre1990",
+      "topic": "technology",
+      "prompt": "Name a programming language created before 1990.",
+      "keywords": ["programming language", "language", "compiler", "computed", "code", "software"],
+      "tiers": {
+        "plankton": ["C", "Python", "BASIC", "COBOL", "Fortran", "Pascal"],
+        "too_clever": ["Lisp", "Ada", "C++", "Perl", "Prolog", "Smalltalk"],
+        "schooler": ["Algol", "Simula", "Modula-2", "Scheme", "Forth", "Logo", "Awk"],
+        "rare": ["APL", "SNOBOL", "Erlang", "ML", "BCPL", "Icon", "Occam", "Miranda"],
+        "deep_cut": ["PL/I", "CLU", "Mesa", "Eiffel", "B", "MUMPS", "SETL", "Vala"],
+        "krillion": ["Plankalkül", "COMIT", "JOSS", "GRASS", "Tutor", "FLOW-MATIC"],
+        "bakrillion": ["Regional Assembly Language", "Short Code", "Superplan", " Autocode", " Speedcoding", "GEORGE"]
+      }
+    },
+    {
+      "id": "tech-linux-distro",
+      "topic": "technology",
+      "prompt": "Name a Linux distribution or Unix-like operating system.",
+      "keywords": ["linux", "distribution", "unix", "operating system", "kernel", "bsd", "os"],
+      "tiers": {
+        "plankton": ["Ubuntu", "Arch Linux", "Debian", "Fedora", "Linux Mint", "Kali Linux"],
+        "too_clever": ["Red Hat", "CentOS", "Manjaro", "Pop!_OS", "Gentoo", "FreeBSD"],
+        "schooler": ["Slackware", "openSUSE", "Alpine Linux", "Zorin OS", "Elementary OS", "NixOS"],
+        "rare": ["Void Linux", "OpenBSD", "NetBSD", "Tails", "Qubes OS", "Puppy Linux", "Garuda Linux"],
+        "deep_cut": ["TempleOS", "Guix System", "Crux", "Tiny Core Linux", "DragonFly BSD", "Solus", "antiX"],
+        "krillion": ["GoboLinux", "Bedrock Linux", "Kiss Linux", "Softlanding Linux System", "Yggdrasil Linux"],
+        "bakrillion": ["MCC Interim Linux", "TAMU Linux", " Minix-vmd", "MkLinux", "Luit Linux", "Coherent"]
+      }
+    },
+    {
+      "id": "tech-keyboard-switch",
+      "topic": "technology",
+      "prompt": "Name a mechanical or magnetic keyboard switch brand or specific switch model.",
+      "keywords": ["switch", "keyboard", "mechanical", "cherry", "gateron", "hall effect", "tactile", "linear"],
+      "tiers": {
+        "plankton": ["Cherry MX Red", "Cherry MX Blue", "Cherry MX Brown", "Razer Green", "Cherry"],
+        "too_clever": ["Holy Panda", "Gateron Yellow", "Cherry MX Black", "cherry mx silver", "Logitech Romer-G"],
+        "schooler": ["Wooting Lekker", "Gateron Jade", "Kailh Box White", "Boba U4T", "NovelKeys Cream", "Akko"],
+        "rare": ["Topre", "Alps SKCM Blue", "IBM Buckling Spring", "Gateron Oil King", "TTC Magneto", "Zealios V2"],
+        "deep_cut": ["Matias Quiet Click", "Raesha Magnetic", "Geon Raptor HE", "Nixie", "Hirose Cherry MX Orange"],
+        "krillion": ["Honeywell Hall Effect", "Fujitsu Leaf Spring", "NEC Oval", "Space Invaders Hi-Tek 725"],
+        "bakrillion": ["Clare-Pendar Reed Switch", "ITW Cortron Magnetic Valve", "Mitsumi Miniature Mechanical", "Omron B3G-S"]
+      }
+    },
+    {
+      "id": "tech-network-protocol",
+      "topic": "technology",
+      "prompt": "Name an internet or computer networking protocol.",
+      "keywords": ["protocol", "network", "internet", "tcp", "udp", "routing", "osi", "packet"],
+      "tiers": {
+        "plankton": ["HTTP", "HTTPS", "TCP", "IP", "Wi-Fi", "Bluetooth", "FTP"],
+        "too_clever": ["UDP", "SSH", "DNS", "SMTP", "DHCP", "IMAP", "POP3"],
+        "schooler": ["ICMP", "ARP", "BGP", "Telnet", "SNMP", "NTP", "WebSocket", "TLS"],
+        "rare": ["OSPF", "IGMP", "QUIC", "SCTP", "Kerberos", "LDAP", "Gopher", "RIP"],
+        "deep_cut": ["EIGRP", "MPLS", "IS-IS", "DCCP", "X.25", "Token Ring", "Frame Relay", "Fibre Channel"],
+        "krillion": ["chaosnet", "DECnet", "AppleTalk", "IPX/SPX", "Banyan VINES", "econet"],
+        "bakrillion": ["PUP (PARC Universal Packet)", "IL Protocol", "CYCLADES TS", "NVP (Network Voice Protocol)", "XNS"]
+      }
+    },
+    {
+      "id": "sport-grand-slam",
+      "topic": "sport",
+      "prompt": "Name a player who has won a Men's or Women's Singles Tennis Grand Slam title.",
+      "keywords": ["tennis", "grand slam", "wimbledon", "us open", "french open", "australian open", "atp", "wta"],
+      "tiers": {
+        "plankton": ["Novak Djokovic", "Roger Federer", "Rafael Nadal", "Serena Williams", "Carlos Alcaraz"],
+        "too_clever": ["Andy Murray", "Venus Williams", "Maria Sharapova", "Jannik Sinner", "Iga Swiatek", "Andre Agassi"],
+        "schooler": ["Pete Sampras", "Steffi Graf", "Bjorn Borg", "John McEnroe", "Stan Wawrinka", "Ashleigh Barty"],
+        "rare": ["Gustavo Kuerten", "Marat Safin", "Goran Ivanisevic", "evonne goolagong", "Jim Courier", "Michael Chang"],
+        "deep_cut": ["Gaston Gaudio", "Thomas Johansson", "Albert Costa", "Sergi Bruguera", "Petr Korda", "Hana Mandlikova"],
+        "krillion": ["Brian Teacher", "Johan Kriek", "Roscoe Tanner", "Mark Edmondson", "Mima Jausovec", "Chris O'Neil"],
+        "bakrillion": ["Algernon Kingscote", "Major Ritchie", "Vere St. Leger Goold", "thelma coyne long", "Daphne Akhurst"]
+      }
+    },
+    {
+      "id": "sport-olympic-host",
+      "topic": "sport",
+      "prompt": "Name a city that has hosted the Summer or Winter Olympic Games.",
+      "keywords": ["olympic", "olympics", "host city", "summer olympics", "winter olympics", "games"],
+      "tiers": {
+        "plankton": ["Paris", "Tokyo", "London", "Beijing", "Los Angeles", "Sydney"],
+        "too_clever": ["Rio de Janeiro", "Athens", "Atlanta", "Barcelona", "Sochi", "Vancouver"],
+        "schooler": ["Seoul", "Munich", "Montreal", "Moscow", "Turin", "Salt Lake City", "Melbourne"],
+        "rare": ["Nagano", "Lillehammer", "Calgary", "Sarajevo", "Antwerp", "Helsinki", "Lake Placid"],
+        "deep_cut": ["Sapporo", "Grenoble", "Innsbruck", "St. Moritz", "Chamonix", "Squaw Valley", "Albertville"],
+        "krillion": ["Garmisch-Partenkirchen", "Cortina d'Ampezzo"],
+        "bakrillion": ["Oslo 1952", "St. Louis 1904"]
+      }
+    },
+    {
+      "id": "sport-f1-constructor",
+      "topic": "sport",
+      "prompt": "Name a Formula 1 constructor (team) that has started at least one Grand Prix.",
+      "keywords": ["formula one", "formula 1", "f1", "constructor", "grand prix", "motorsport", "racing team"],
+      "tiers": {
+        "plankton": ["Ferrari", "Mercedes", "Red Bull", "McLaren", "Aston Martin"],
+        "too_clever": ["Williams", "Alpine", "Haas", "Renault", "Lotus", "Sauber"],
+        "schooler": ["Brawn GP", "Jordan", "Benetton", "Tyrrell", "Brabham", "Force India", "Toro Rosso"],
+        "rare": ["Minardi", "Ligier", "Arrows", "Stewart", "BAR", "Shadow", "March", "BRM"],
+        "deep_cut": ["Super Aguri", "Spyker", "Caterham", "Andrea Moda", "Osella", "Zakspeed", "Toleman", "Hesketh"],
+        "krillion": ["Life Racing Engines", "EuroBrun", "Coloni", "Onyx Grand Prix", "Fondmetal", "Simtek"],
+        "bakrillion": ["Maki Engineering", "Connew Racing Team", "Kauhsen", "Apollon", "Tecno", "Bellasi"]
+      }
+    },
+    {
+      "id": "music-woodwind-instrument",
+      "topic": "music",
+      "prompt": "Name a woodwind instrument (modern, folk, or historical).",
+      "keywords": ["woodwind", "instrument", "reed", "flute", "saxophone", "clarinet", "oboe", "pipe"],
+      "tiers": {
+        "plankton": ["Flute", "Clarinet", "Saxophone", "Oboe", "Bassoon", "Recorder"],
+        "too_clever": ["Piccolo", "Alto Saxophone", "Tenor Saxophone", "Bagpipes", "Harmonica", "Pan flute"],
+        "schooler": ["English Horn", "Cor Anglais", "Bass Clarinet", "Contrabassoon", "Soprano Saxophone", "Tin Whistle"],
+        "rare": ["Ocarina", "Shakuhachi", "Duduk", "Basset Horn", "Sopranino Saxophone", "Krummhorn", "Shawm"],
+        "deep_cut": ["Heckelphone", "Sarrusophone", "Subcontrabass Saxophone", "C Melody Saxophone", "Uilleann Pipes", "Zurna"],
+        "krillion": ["Tubax", "Aulochrome", "Rothphone", "Conn-O-Sax", "Rackett", "Tarogato"],
+        "bakrillion": ["Contrabassophone", "Caledonica", "Alto Fagotto", "Clarinette d'amour", "Bimbifono"]
+      }
+    },
+    {
+      "id": "music-classical-composer",
+      "topic": "music",
+      "prompt": "Name a 20th-century classical or avant-garde composer.",
+      "keywords": ["composer", "classical", "20th-century", "symphony", "sonata", "concerto", "avant-garde"],
+      "tiers": {
+        "plankton": ["Igor Stravinsky", "Claude Debussy", "Sergei Rachmaninoff", "Dmitri Shostakovich", "George Gershwin"],
+        "too_clever": ["Maurice Ravel", "Aaron Copland", "John Cage", "Philip Glass", "Sergei Prokofiev", "Gustav Mahler"],
+        "schooler": ["Bela Bartok", "Arnold Schoenberg", "Benjamin Britten", "Paul Hindemith", "Erik Satie", "Francis Poulenc"],
+        "rare": ["Olivier Messiaen", "Darius Milhaud", "György Ligeti", "Karlheinz Stockhausen", "Pierre Boulez", "Iannis Xenakis"],
+        "deep_cut": ["Eugène Bozza", "Jacques Ibert", "Pierre Sancan", "Heitor Villa-Lobos", "Alfred Schnittke", "Einojuhani Rautavaara"],
+        "krillion": ["Maurice Dubois", "Ida Gotkovsky", "Fernande Decruck", "Kaikhosru Shapurji Sorabji", "Giacinto Scelsi"],
+        "bakrillion": ["Obukhov Nikolai", "Ivan Wyschnegradsky", "Arthur Lourié", "Roslavets Nikolai", "Johanna Beyer"]
+      }
+    },
+    {
+      "id": "music-game-film-composer",
+      "topic": "music",
+      "prompt": "Name a film or video game soundtrack composer.",
+      "keywords": ["composer", "soundtrack", "film score", "video game music", "ost", "orchestra"],
+      "tiers": {
+        "plankton": ["Hans Zimmer", "John Williams", "Toby Fox", "C418", "Danny Elfman"],
+        "too_clever": ["Ennio Morricone", "Howard Shore", "Koji Kondo", "Lena Raine", "Ludwig Göransson", "Michael Giacchino"],
+        "schooler": ["Nobuo Uematsu", "Joe Hisaishi", "Jeremy Soule", "Christopher Larkin", "Trent Reznor", "Alexandre Desplat"],
+        "rare": ["Yoko Shimomura", "Yasunori Mitsuda", "Gareth Coker", "Darren Korb", "Austin Wintory", "Vangelis", "Bernard Herrmann"],
+        "deep_cut": ["Motoi Sakuraba", "Masashi Hamauzu", "Jesper Kyd", "Chris Christodoulou", "DM DOKURO", "Hitoshi Sakimoto"],
+        "krillion": ["Manabu Namiki", "ZUN", "Yuzo Koshiro", "Michiru Yamane", "Kow Otani", "Ryu Umemoto"],
+        "bakrillion": ["Toshiya Yamanaka", "Mieko Ishikawa", "Soshiro Hokkai", "Tim Follin", "Masaharu Iwata"]
+      }
+    },
+    {
+      "id": "fishing-saltwater-species",
+      "topic": "fishing",
+      "prompt": "Name a saltwater fish species targeted by recreational anglers.",
+      "keywords": ["fish", "saltwater", "marine", "angler", "angling", "perciformes", "species", "ocean"],
+      "tiers": {
+        "plankton": ["Tuna", "Marlin", "Snapper", "Mahi-Mahi", "Cod", "Mackerel", "Shark"],
+        "too_clever": ["Swordfish", "Sailfish", "Barramundi", "Tarpon", "Halibut", "Redfish", "Striped Bass"],
+        "schooler": ["Yellowtail Kingfish", "Flathead", "Bream", "Whiting", "Bonefish", "Roosterfish", "Cobia", "Grouper"],
+        "rare": ["Mulloway", "Jewfish", "Giant Trevally", "Luderick", "Tailor", "Permit", "Wahoo", "Amberjack", "Snook"],
+        "deep_cut": ["Samson Fish", "Dhufish", "Threadfin Salmon", "Black Drummer", "Mangrove Jack", "Coral Trout", "Tautog"],
+        "krillion": ["Teraglin", "Pearl Perch", "Nannygai", "Bastard Trumpeter", "Boarfish", "Beryx"],
+        "bakrillion": ["Glaucosoma hebraicum", "Argyrosomus japonicus", "Girella tricuspidata", "Nemadactylus macropterus", "Epinephelus daemelii"]
+      }
+    },
+    {
+      "id": "fishing-knot",
+      "topic": "fishing",
+      "prompt": "Name a fishing knot used to tie line, leaders, or hooks.",
+      "keywords": ["knot", "fishing", "line", "leader", "braid", "fluorocarbon", "hook", "loop"],
+      "tiers": {
+        "plankton": ["Grinner Knot", "Clinched Knot", "Improved Clinch Knot", "Palomar Knot", "Uni Knot"],
+        "too_clever": ["Blood Knot", "Loop Knot", "Surgeon's Knot", "Dropper Loop", "Snell Knot"],
+        "schooler": ["FG Knot", "Albright Knot", "Double Uni Knot", "Rapala Knot", "Trilene Knot", "San Diego Jam Knot"],
+        "rare": ["PR Knot", "Bimini Twist", "Perfection Loop", "Yucatan Knot", "Alberto Knot", "Orvis Knot", "Nail Knot"],
+        "deep_cut": ["Aussie Quickie Knot", "Slim Beauty Knot", "Sebile Knot", "Davy Knot", "Non-Slip Mono Loop", "Centauri Knot"],
+        "krillion": ["SC Knot", "GT Knot", "Peixet Knot", "Rizzuto Finish", "Jansik Special", "World's Fair Knot"],
+        "bakrillion": ["80% Braid-to-Leader Midknot", "Pitzen Knot (16-20 Knot)", "Eugene Bend", "Kryston Grinner", "agchain knot"]
+      }
+    }
+  ],
+  "combinatorialTemplates": [
+    {
+      "topic": "sport",
+      "pattern": "Name a {adj} athlete or team associated with {discipline}.",
+      "keywords": ["sport", "athlete", "championship", "olympic", "league", "player", "tournament"],
+      "adjectives": [
+        "championship-winning", "record-breaking", "Olympic medalist", "Hall of Fame", "20th-century", "21st-century", "Australian", "European", "undefeated", "world-champion"
+      ],
+      "disciplines": [
+        "Men's or Women's Tennis", "Formula 1 Racing", "FIFA World Cup Football", "Track and Field Sprinting", "Test Cricket", "Professional Road Cycling", "Olympic Swimming", "Badminton", "Table Tennis", "Snooker", "Rugby Union", "Alpine Skiing", "Marathon Running", "Artistic Gymnastics", "Fencing", "Rowing", "Sailing", "Archery", "Speed Skating", "Biathlon", "Water Polo", "Handball", "Volleyball", "Amateur Boxing", "Judo", "Taekwondo", "Triathlon", "Golf Major Championships", "Pole Vault", "Decathlon"
+      ]
+    },
+    {
+      "topic": "technology",
+      "pattern": "Name a {adj} {tech_domain}.",
+      "keywords": ["computer", "software", "hardware", "technology", "system", "protocol", "algorithm", "chip"],
+      "adjectives": [
+        "historical or modern", "open-source", "commercial", "1980s or 1990s", "high-performance", "cross-platform", "industry-standard", "low-level", "enterprise", "academic"
+      ],
+      "tech_domains": [
+        "Sorting or Graph Algorithm", "Database Management System", "CPU Microarchitecture or Processor Family", "Web Browser or Rendering Engine", "File System Format", "Cryptography Cipher or Hash Function", "Version Control System", "3D CAD or Graphics Software", "Terminal Emulator or Command Shell", "Virtual Machine Hypervisor", "Game Engine or Graphics API", "Audio Codec or Container Format", "Microcontroller or Single-Board Computer", "Text Editor or IDE", "Network Routing Protocol", "Machine Learning Framework", "Compiler or Assembler", "Operating System Kernel", "Storage Bus or Hardware Connector", "Compression Algorithm", "Packet Sniffer or Security Tool", "Build Automation Tool", "Relational or NoSQL Data Store", "Font Rasterizer or Typeface Format", "Instruction Set Architecture (ISA)", "DNS Record Type", "HTTP Status Code Name", "RAID Level or Storage Topology", "Memory Technology (RAM/ROM type)", "Wireless Communication Standard"
+      ]
+    },
+    {
+      "topic": "music",
+      "pattern": "Name a {adj} {music_domain}.",
+      "keywords": ["music", "musical", "composer", "instrument", "symphony", "sonata", "scale", "chord", "opera"],
+      "adjectives": [
+        "classical or contemporary", "Romantic-era", "Baroque-era", "20th-century", "virtuosic", "orchestral", "French or German", "solo instrumental", "conservatory-standard", "avant-garde"
+      ],
+      "music_domains": [
+        "Saxophone Concerto or Sonata", "Piano Sonata or Etude Collection", "Solo Cello or Violin Suite", "Woodwind Chamber Piece", "Symphonic Poem or Tone Poem", "Opera or Operetta", "Musical Scale or Mode", "Tempo or Dynamic Marking in Italian", "Pipe Organ Stop or Keyboard Instrument", "Percussion Instrument", "Brass Instrument or Mute Type", "String Instrument (Bowed or Plucked)", "Ballet Score", "String Quartet Composition", "Music Theory Cadence or Modulation Term", "Film Score Soundtrack", "Indie Video Game Soundtrack", "Traditional Celtic or Scottish Bagpipe Tune", "Jazz Standard Composition", "Polyphonic Vocal Form", "Synthesizer Model", "Microphone Polar Pattern or Studio Mic", "Audio Effect or DSP Processor", "Time Signature or Rhythmic Tuplet", "Concerto Grosso", "Nocturne or Prelude Work", "Wind Ensemble or Concert Band Piece", "Luthier or Instrument Manufacturer", "Musical Clef or Notation Symbol", "Requiem or Choral Mass"
+      ]
+    },
+    {
+      "topic": "fishing",
+      "pattern": "Name a {adj} {fishing_domain}.",
+      "keywords": ["fish", "fishing", "angling", "marine", "freshwater", "lure", "tackle", "species", "estuary"],
+      "adjectives": [
+        "saltwater", "freshwater", "estuary or harbour", "pelagic offshore", "Australian or Indo-Pacific", "cold-water", "tropical", "sportfishing", "bottom-dwelling", "predatory"
+      ],
+      "fishing_domains": [
+        "Gamefish Species", "Soft Plastic Lure Profile", "Hardbody Crankbait or Minnow Lure", "Surface Popper or Stickbait", "Fishing Reel Type or Manufacturer", "Terminal Tackle Sinker or Rig", "Natural Bait Species (Crustacean, cephalopod, or baitfish)", "Fly Fishing Nymph or Dry Fly Pattern", "Hook Style or Pattern", "Braid or Monofilament Line Brand", "Wharf or Pier Target Species", "Deep-Sea Trench or Reef Fish", "Shark or Ray Species", "Trout or Salmonid Species", "Bream, Snapper, or Sparidae Family Member", "Flathead or Bottom Ambush Species", "Mackerel or Tuna Tribe (Scombridae) Species", "Trevally or Kingfish (Carangidae) Species", "Swivel, Clip, or Leader Component", "Rod Action, Blank Material, or Guide Type", "Squid Jig (Egi) Size or Technique", "Chumming / Berley Ingredient", "Gaff, Landing Net, or Dehooker Tool", "Sonar / Fishfinder Transducer Technology", "Trolling Spread Component (Outrigger, Downrigger, Planer)", "Ice Fishing or Winter Angling Tool", "Rock Fishing Safety or Tackle Item", "Carp or Coarse Fishing Rig", "Bass Fishing Technique", "IGFA World Record Category"
+      ]
+    }
+  ]
+}

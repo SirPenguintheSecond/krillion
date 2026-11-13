@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Krillion · The Unlimited Trivia Dive</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Pygame-Style 60FPS Ocean Dive Canvas -->
+  <canvas id="oceanCanvas"></canvas>
+
+  <!-- Depth Ruler Sidebar -->
+  <aside id="depthRuler" class="depth-ruler hidden">
+    <div class="ruler-track">
+      <div class="ruler-zone" style="top: 0%">0m · Sunlight</div>
+      <div class="ruler-zone" style="top: 15%">1,500m · Twilight</div>
+      <div class="ruler-zone" style="top: 38%">4,000m · Midnight</div>
+      <div class="ruler-zone" style="top: 66%">7,000m · Trench</div>
+      <div class="ruler-zone bakrillion-zone" style="top: 94%">10,500m · Bakrillion Abyss</div>
+      <div id="subMarker" class="sub-marker" style="top: 0%">
+        <span class="sub-icon">🦐</span>
+        <span id="liveDepthLabel" class="sub-depth-text">0m</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Top Navigation Bar -->
+  <header class="top-nav">
+    <div class="nav-left">
+      <button id="menuBtn" class="icon-btn" title="Menu">☰</button>
+      <div class="brand" id="homeLogoBtn">
+        <span class="brand-krill">🦐</span>
+        <span class="brand-title">krillion</span>
+        <span class="brand-badge">UNLIMITED</span>
+      </div>
+    </div>
+    <div class="nav-right">
+      <div class="prompt-pool-badge" id="poolCountBadge">1,240+ Prompts Ready</div>
+      <button id="statsBtn" class="nav-pill-btn">📊 Stats</button>
+      <button id="settingsBtn" class="nav-pill-btn">🤖 AI Judge</button>
+    </div>
+  </header>
+
+  <!-- Slide-out Krillion Side Menu -->
+  <div id="sideDrawer" class="side-drawer hidden">
+    <div class="drawer-backdrop" id="drawerBackdrop"></div>
+    <div class="drawer-content">
+      <div class="drawer-header">
+        <span>krillion · menu</span>
+        <button id="closeDrawerBtn" class="icon-btn">✕</button>
+      </div>
+      <nav class="drawer-links">
+        <a href="#" class="drawer-item active" data-action="home">∞ Unlimited Dive</a>
+        <a href="#" class="drawer-item" data-action="daily">☀️ Daily Seeded Dive</a>
+        <a href="#" class="drawer-item" data-action="tiers">🌊 Rarity Tiers & Bakrillion</a>
+        <a href="#" class="drawer-item" data-action="stats">🏆 My Krillion Logbook</a>
+        <a href="#" class="drawer-item" data-action="settings">⚙️ AI & Timer Settings</a>
+      </nav>
+      <div class="drawer-footer">
+        <p>Every point = <strong>10m depth</strong>.</p>
+        <p class="drawer-sub">Refusals don't end your turn—shoot for <em>One in a Bakrillion</em> first!</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN CONTAINER -->
+  <main class="app-container">
+
+    <!-- 1. HOME SCREEN -->
+    <section id="homeScreen" class="screen active">
+      <div class="hero-card">
+        <div class="hero-eyebrow">THE OBSCURE KNOWLEDGE DIVE</div>
+        <h1 class="hero-title">Rare answers sink deeper.</h1>
+        <p class="hero-subtitle">
+          7 prompts per dive. 25 seconds each. Obvious answers float near the surface.
+          Unleash an answer so obscure the AI has to excavate the archives to hit <strong>One in a Bakrillion</strong>.
+        </p>
+
+        <!-- Mode Switcher -->
+        <div class="mode-toggles">
+          <button class="mode-btn active" data-mode="unlimited">∞ Unlimited Dive (7 Prompts)</button>
+          <button class="mode-btn" data-mode="endless">🫧 Endless Survival (3 Air Tanks)</button>
+          <button class="mode-btn" data-mode="relax">⚓ Untimed Deep Research</button>
+        </div>
+
+        <!-- Topic Selector Grid -->
+        <div class="topic-section-header">
+          <span>SELECT DIVE TOPIC</span>
+          <span id="selectedTopicLabel" class="selected-topic-pill">All Topics (Random)</span>
+        </div>
+
+        <div class="topic-grid" id="topicGrid">
+          <button class="topic-card active" data-topic="all">
+            <div class="topic-icon">🌊</div>
+            <div class="topic-info">
+              <h3>All Topics</h3>
+              <p>Every category mixed & randomized</p>
+            </div>
+            <span class="topic-count" data-count-for="all">1,200+</span>
+          </button>
+
+          <button class="topic-card" data-topic="sport">
+            <div class="topic-icon">🎾</div>
+            <div class="topic-info">
+              <h3>Sport</h3>
+              <p>Tennis, football, Olympics, F1 & niche rules</p>
+            </div>
+            <span class="topic-count" data-count-for="sport">300+</span>
+          </button>
+
+          <button class="topic-card" data-topic="technology">
+            <div class="topic-icon">💻</div>
+            <div class="topic-info">
+              <h3>Technology</h3>
+              <p>Code, hardware, OS lore, switches & protocols</p>
+            </div>
+            <span class="topic-count" data-count-for="technology">300+</span>
+          </button>
+
+          <button class="topic-card" data-topic="music">
+            <div class="topic-icon">🎷</div>
+            <div class="topic-info">
+              <h3>Music</h3>
+              <p>Classical repertoire, instruments, OSTs & theory</p>
+            </div>
+            <span class="topic-count" data-count-for="music">300+</span>
+          </button>
+
+          <button class="topic-card" data-topic="fishing">
+            <div class="topic-icon">🎣</div>
+            <div class="topic-info">
+              <h3>Fishing</h3>
+              <p>Gamefish species, rigs, lures, knots & habitats</p>
+            </div>
+            <span class="topic-count" data-count-for="fishing">300+</span>
+          </button>
+        </div>
+
+        <!-- Rarity Legend Bar -->
+        <div class="tier-preview-strip">
+          <div class="tier-chip t-plankton" title="Really obvious (10 pts / 100m)">Plankton · 10</div>
+          <div class="tier-chip t-clever" title="Predictable clever trap (15 pts / 150m)">Too Clever · 15</div>
+          <div class="tier-chip t-schooler" title="Pretty niche (30 pts / 300m)">Schooler · 30</div>
+          <div class="tier-chip t-rare" title="Niche (60 pts / 600m)">Rare · 60</div>
+          <div class="tier-chip t-deepcut" title="Very niche (85 pts / 850m)">Deep Cut · 85</div>
+          <div class="tier-chip t-krillion" title="Dumb niche, barely heard of (100 pts / 1,000m)">One in a Krillion · 100</div>
+          <div class="tier-chip t-bakrillion" title="Abyssal anomaly! Deep research required (150 pts / 1,500m)">One in a Bakrillion · 150</div>
+        </div>
+
+        <button id="startDiveBtn" class="primary-dive-btn">
+          <span>START DIVE</span>
+          <span class="btn-arrow">↓</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- 2. ACTIVE DIVE SCREEN -->
+    <section id="diveScreen" class="screen hidden">
+      <div class="dive-hud">
+        <div class="hud-stat">
+          <span class="hud-label">PROMPT</span>
+          <span id="hudPromptCounter" class="hud-value">1 / 7</span>
+        </div>
+        <div class="hud-stat">
+          <span class="hud-label">DEPTH</span>
+          <span id="hudDepth" class="hud-value">0m</span>
+        </div>
+        <div class="hud-stat">
+          <span class="hud-label">SCORE</span>
+          <span id="hudScore" class="hud-value">0 pts</span>
+        </div>
+        <div id="hudTanksWrap" class="hud-stat hidden">
+          <span class="hud-label">AIR TANKS</span>
+          <span id="hudTanks" class="hud-value">🫧🫧🫧</span>
+        </div>
+      </div>
+
+      <!-- Prompt Progress Dots -->
+      <div id="promptDots" class="prompt-dots"></div>
+
+      <!-- Active Question Card -->
+      <div class="question-card" id="questionCard">
+        <div class="question-meta">
+          <span id="questionCategoryBadge" class="cat-badge">TECHNOLOGY</span>
+          <div class="timer-ring-wrap" id="timerWrap">
+            <span id="timerText" class="timer-text">25s</span>
+          </div>
+        </div>
+
+        <div class="timer-bar-track">
+          <div id="timerBarFill" class="timer-bar-fill"></div>
+        </div>
+
+        <h2 id="promptText" class="prompt-heading">Name a programming language created before 1990.</h2>
+        <p id="promptSubhint" class="prompt-subhint">Type one valid answer. Rejected guesses don't end your clock—try your rarest pick first!</p>
+
+        <form id="answerForm" autocomplete="off">
+          <div class="input-row" id="inputRow">
+            <input
+              type="text"
+              id="answerInput"
+              placeholder="Type a niche answer and press Enter..."
+              maxlength="90"
+              autofocus
+            />
+            <button type="submit" id="submitAnswerBtn" class="submit-btn">DIVE</button>
+          </div>
+        </form>
+
+        <!-- Refusal / Deep Research Status Banner -->
+        <div id="liveFeedbackBanner" class="feedback-banner hidden"></div>
+
+        <div class="dive-actions-row">
+          <button id="passPromptBtn" class="secondary-btn">Pass Prompt (0m)</button>
+          <button id="abortDiveBtn" class="secondary-btn danger-text">Surface Early</button>
+        </div>
+      </div>
+
+      <!-- Rarity Reveal Overlay Card (Shown after each prompt completes) -->
+      <div id="revealCard" class="reveal-card hidden">
+        <div id="revealTierBadge" class="reveal-tier-badge">ONE IN A BAKRILLION</div>
+        <h3 id="revealAnswerTitle" class="reveal-answer-title">Malbolge</h3>
+        <div class="reveal-metrics">
+          <div class="metric-box">
+            <span class="metric-label">POINTS</span>
+            <span id="revealPoints" class="metric-val">+150</span>
+          </div>
+          <div class="metric-box">
+            <span class="metric-label">DESCENT</span>
+            <span id="revealMeters" class="metric-val">+1,500m</span>
+          </div>
+          <div class="metric-box">
+            <span class="metric-label">OBSCURITY</span>
+            <span id="revealPercentile" class="metric-val">99.98%</span>
+          </div>
+        </div>
+        <p id="revealExplanation" class="reveal-explanation"></p>
+
+        <!-- Sample Answers across Tiers for this Prompt -->
+        <div class="sample-tiers-box">
+          <div class="sample-header">CURATED BENCHMARKS FOR THIS PROMPT</div>
+          <div id="sampleTiersGrid" class="sample-tiers-grid"></div>
+        </div>
+
+        <button id="nextPromptBtn" class="primary-dive-btn">NEXT PROMPT ↓</button>
+      </div>
+    </section>
+
+    <!-- 3. FINAL SUMMARY SCREEN -->
+    <section id="summaryScreen" class="screen hidden">
+      <div class="summary-card">
+        <div class="hero-eyebrow" id="summaryZoneLabel">HADAL TRENCH REACHED</div>
+        <h1 id="summaryTotalDepth" class="summary-depth-big">6,450m</h1>
+        <p id="summaryTotalScore" class="summary-score-sub">645 Points · Topic: All Topics</p>
+
+        <div id="summaryLogList" class="summary-log-list"></div>
+
+        <div class="summary-actions">
+          <button id="playAgainBtn" class="primary-dive-btn">∞ DIVE AGAIN (UNLIMITED)</button>
+          <button id="shareDiveBtn" class="secondary-btn">📋 Copy Share Card</button>
+          <button id="backHomeBtn" class="secondary-btn">🏠 Change Topic</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- AI JUDGE & SETTINGS MODAL -->
+  <div id="settingsModal" class="modal hidden">
+    <div class="modal-backdrop" data-close-modal="settingsModal"></div>
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3>🤖 Hybrid AI & Deep-Research Judge</h3>
+        <button class="icon-btn" data-close-modal="settingsModal">✕</button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-desc">
+          Krillion Abyssal evaluates answers using a <strong>3-Layer Engine</strong>:
+          <br>1. <strong>Curated Tier Database</strong> with fuzzy alias matching.
+          <br>2. <strong>Live Wikipedia / Wikidata Deep-Research API</strong> (works automatically out-of-the-box with zero keys—verifies ultra-obscure entities and calculates article byte-length & link-density obscurity!).
+          <br>3. <strong>Serverless / Client Gemini LLM Judge</strong> for semantic edge-cases and <em>One in a Bakrillion</em> verification.
+        </p>
+        <label class="field-label">Optional Gemini API Key (Client-side override if not set in Vercel env)</label>
+        <input type="password" id="geminiKeyInput" class="modal-input" placeholder="AIzaSy... (Leave blank to use Vercel /api/evaluate or Live Wiki Deep Research)" />
+
+        <label class="field-label">Dive Clock Duration</label>
+        <select id="timerDurationSelect" class="modal-input">
+          <option value="25">25 Seconds (Official Krillion Standard)</option>
+          <option value="40">40 Seconds (Extended Think Time)</option>
+          <option value="15">15 Seconds (Blitz Dive)</option>
+        </select>
+
+        <button id="saveSettingsBtn" class="primary-dive-btn full-width">Save Configuration</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TIERS INFO & STATS MODAL -->
+  <div id="infoModal" class="modal hidden">
+    <div class="modal-backdrop" data-close-modal="infoModal"></div>
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 id="infoModalTitle">🌊 Rarity Tiers & Scoring</h3>
+        <button class="icon-btn" data-close-modal="infoModal">✕</button>
+      </div>
+      <div id="infoModalBody" class="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
